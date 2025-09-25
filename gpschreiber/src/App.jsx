@@ -13,20 +13,26 @@ function App() {
       <header className='site-header'>
         <div className='name'>Gabriel Schreiber</div>
         <nav className='nav-bar' aria-label="Navigation bar">
-          <a>About Me</a>
-          <a>Skills</a>
-          <a>Education and Experience</a>
+          <a href='#about'>About Me</a>
           <a>Projects</a>
+          <a>Skills</a>
           <a>Contact</a>
         </nav>
       </header>
 
       <main className='container'>
-        <section id='about' className='about-me card'>
-          <div className='me-left'>
-            <h1 className='title'>Gabriel Schreiber</h1>
-            <h2 className='subtitle'>Computer and Date Science</h2>
-            
+        <section id='about-me' className='about-me card'>
+          <div className='about-me-left'>
+            <h1 className='title'>Computer Science Student </h1>
+            <p className='subtitle'>
+              Passionate about solving complex problems through data-driven decision making.
+            </p>
+          </div>
+          <div className='education card'>
+            <p className='education title'>B.S. in Computer Science</p>
+            <p className='education subtitle'>Minor in Statistics</p>
+            {/* <TextGradient>University of Florida</TextGradient> */}
+            <p className='education'>University of Florida</p>
           </div>
         </section>
       </main>
