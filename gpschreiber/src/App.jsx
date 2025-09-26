@@ -50,9 +50,13 @@ function App() {
             />
             <ProjectCard 
               title="GenreJumper" 
-              info="Music discovery application, aids users in exploring new genres of music through Depth First Search and Djikstra's Algorithm graph traversals, starting from an input song and ending on the first song match belonging to a specified genre"
+              info="Built a music discovery app that uses graph traversal (DFS and Dijkstra’s Algorithm) to recommend songs across genres from a chosen starting track"
               skills={["Python", "SpotiPy", "Data Structures and Algorithms", "OOP"]}
               link="https://github.com/gabeschreiber/GenreJumper"
+            />
+            <ProjectCard
+              title="SwampStudy"
+              info="Web application for UF students to find others in their classes and create and manage study groups"
             />
           </div>
           
