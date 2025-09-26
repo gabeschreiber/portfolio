@@ -88,6 +88,7 @@
 .meta { color: rgba(255,255,255,0.5); font-weight:500; margin-left:.4rem }
 
 .projects-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:1rem; margin-top:.75rem }
+.projects-slider { display: inline-flexbox; margin-top: .75rem;}
 .project { padding: .75rem; border-radius:8px; background: rgba(255,255,255,0.02) }
 .link { color: #9fb0ff; text-decoration: none }
 

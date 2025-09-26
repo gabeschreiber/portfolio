@@ -1,5 +1,6 @@
 import React from 'react'
 import './App.css'
+import ProjectCard from './components/ProjectCard'
 
 const SKILLS = {
   'Programming Languages': ['Python', 'R', 'C++', 'JavaScript', 'Java', 'TypeScript', 'SQL', 'HTML', 'CSS', 'VHDL', 'AVR', 'MATLAB'],
@@ -14,7 +15,7 @@ function App() {
         <div className='name'>Gabriel Schreiber</div>
         <nav className='nav-bar' aria-label="Navigation bar">
           <a href='#about'>About Me</a>
-          <a>Projects</a>
+          <a href='#projects'>Projects</a>
           <a>Skills</a>
           <a>Contact</a>
         </nav>
@@ -25,10 +26,10 @@ function App() {
           <div className='about-me-left'>
             <h1 className='title'>Computer Science Student </h1>
             <p className='subtitle'>
-              Passionate about solving complex problems through data-driven decision making.
+              Passionate about finding data-driven solutions to real-world, complex problems.
             </p>
           </div>
-          <div className='education card'>
+          <div className='education'>
             <p className='education title'>B.S. in Computer Science</p>
             <p className='education subtitle'>Minor in Statistics</p>
             {/* <TextGradient>University of Florida</TextGradient> */}
@@ -36,6 +37,27 @@ function App() {
           </div>
         </section>
       </main>
+
+      <section id='projects' className='container'>
+        <div className='project-section card'>
+          <h2 className='title'>Projects</h2>
+          <div className='projects-slider'>
+            <ProjectCard 
+              title="NBA Playoff Predictor" 
+              info="Random Forest Classifier trained on historical mid-season NBA data to predict playoff teams" 
+              skills={["Pandas", "Scikit-Learn", "Random Forest Classifier", "Web Scraping", "Data Cleaning", "Feature Engineering"]}
+              link="https://github.com/gabeschreiber/nbaplayoffpredictor"
+            />
+            <ProjectCard 
+              title="GenreJumper" 
+              info="Music discovery application, aids users in exploring new genres of music through Depth First Search and Djikstra's Algorithm graph traversals, starting from an input song and ending on the first song match belonging to a specified genre"
+              skills={["Python", "SpotiPy", "Data Structures and Algorithms", "OOP"]}
+              link="https://github.com/gabeschreiber/GenreJumper"
+            />
+          </div>
+          
+        </div>
+      </section>
 
     </div>
 
