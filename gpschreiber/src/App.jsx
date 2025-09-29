@@ -8,9 +8,10 @@ const SKILLS = {
   'Skills/Technologies': ['Machine Learning', 'Data Science', 'Data Cleaning/Manipulation', 'Feature Engineering', 'Web Scraping', 'Agile Methodologies', 'Object-Oriented Programming', 'Linux', 'Git', 'CUDA', 'Teamwork', 'Leadership', 'Communication', 'Problem Solving', 'Organization', 'Initiative', 'Fast Learner']
 }
 
+
 function App() {
   return (
-    <div className='root'>
+    <div className='app-root'>
       <header className='site-header'>
         <div className='name'>Gabriel Schreiber</div>
         <nav className='nav-bar' aria-label="Navigation bar">
@@ -39,24 +40,32 @@ function App() {
       </main>
 
       <section id='projects' className='container'>
-        <div className='project-section card'>
+        <div className='project-section'>
           <h2 className='title'>Projects</h2>
-          <div className='projects-slider'>
+          <div className='projects-grid'>
             <ProjectCard 
               title="NBA Playoff Predictor" 
-              info="Random Forest Classifier trained on historical mid-season NBA data to predict playoff teams" 
-              skills={["Pandas", "Scikit-Learn", "Random Forest Classifier", "Web Scraping", "Data Cleaning", "Feature Engineering"]}
+              info="Machine learning model using a Random Forest Classifier on historical mid-season NBA data to predict playoff teams (~90% accuracy on 2025 season)" 
+              skills={["Python", "Pandas", "Scikit-Learn", "Random Forest Classifier", "Web Scraping", "Data Cleaning", "Feature Engineering", "ML Dev"]}
               link="https://github.com/gabeschreiber/nbaplayoffpredictor"
-            />
-            <ProjectCard 
-              title="GenreJumper" 
-              info="Built a music discovery app that uses graph traversal (DFS and Dijkstra’s Algorithm) to recommend songs across genres from a chosen starting track"
-              skills={["Python", "SpotiPy", "Data Structures and Algorithms", "OOP"]}
-              link="https://github.com/gabeschreiber/GenreJumper"
             />
             <ProjectCard
               title="SwampStudy"
-              info="Web application for UF students to find others in their classes and create and manage study groups"
+              info="Contributer — Full-stack platform connecting UF students with study partners based on shared classes, locations, and study habits"
+              skills={["TypeScript", "React+Vite", "TailwindCSS", "Node.js", "Fastify", "PostgreSQL", "Full-Stack Development"]}
+              link="https://github.com/connor-kress/swamp-study"
+            />
+            <ProjectCard 
+              title="CineScope" 
+              info="Movie discovery app for browsing popular titles, viewing ratings, and exploring a dynamic “Top 10” based on user activity"
+              skills={["JavaScript", "React+Vite", "TailwindCSS", "Appwrite", "Frontend Development"]}
+              link="https://github.com/gabeschreiber/CineScope"
+            />
+            <ProjectCard 
+              title="GenreJumper" 
+              info="Music discovery app leveraging graph traversal (DFS and Dijkstra’s Algorithm) to recommend songs across genres from a chosen starting track"
+              skills={["Python", "SpotiPy"]}
+              link="https://github.com/gabeschreiber/GenreJumper"
             />
           </div>
           
