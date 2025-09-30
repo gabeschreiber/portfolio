@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, use } from 'react';
 
 const TypeWriter = ({ text = '', delay = 50, resetKey }) => {
     const [currentText, setCurrentText] = useState('');
@@ -26,6 +26,10 @@ const TypeWriter = ({ text = '', delay = 50, resetKey }) => {
 
         return () => clearTimeout(t);
     }, [index, text, delay]);
+
+    useEffect(() => {
+        console.log('TypeWriter render', Date.now());
+    });
 
     return <span aria-live="polite">{currentText}</span>;
 };

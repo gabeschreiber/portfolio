@@ -16,32 +16,22 @@ function App() {
   const [resetKey, setResetKey] = useState(0);
 
   useEffect(() => {
+    // useEffect for TypeWriter effect to re-render when user scrolls out of view then back
     const element = ref.current;
     if (!element || typeof IntersectionObserver === 'undefined') return;
 
-    let visibleTimer = null;
-    const wasVisible = { current: false };
-
+    let wasVisible = false;
 
     const observer = new IntersectionObserver(entries => {
       entries.forEach(e => {
-        if (e.isIntersecting) {
-          if (!wasVisible.current && !visibleTimer) {
-            visibleTimer = setTimeout(() => {
-              wasVisible.current = true;
-              visibleTimer = null;
-              setResetKey(Date.now());
-            }, 2000);
-          }
-        } else {
-          wasVisible.current = false;
-          if (visibleTimer) {
-            clearTimeout(visibleTimer);
-            visibleTimer = null;
-          }
+        if (e.isIntersecting && !wasVisible) {
+          wasVisible = true;
+          setResetKey(Date.now());
+        } else if (!e.isIntersecting) {
+          wasVisible = false;
         }
       });
-    }, { threshold: 0.6, rootMargin: '0px 0px -10% 0px' });
+    }, { threshold: 0.1 });
 
     observer.observe(element);
     return () => observer.disconnect();
@@ -120,11 +110,11 @@ function App() {
               {Object.entries(SKILLS).map(([category, skills]) => (
                 <div key={category} className='skill-category'>
                   <h3 className='skill-category-title'>{category}</h3>
-                  <p className='skill-list'>
+                  <div className='skill-list'>
                     {skills.map((skill) => (
                       <p key={skill} className='skill-badge'>{skill}</p>
                     ))}
-                  </p>
+                  </div>
                 </div>
               ))}
             </div>
