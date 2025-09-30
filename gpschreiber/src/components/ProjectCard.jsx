@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProjectCard = ({title, info, skills, link}) => {
+const ProjectCard = ({title, info, tech, link}) => {
     return (
         <div className="project">
             <h3 
@@ -9,7 +9,7 @@ const ProjectCard = ({title, info, skills, link}) => {
                     {title}
             </h3>
             <p className="project-skills">
-                {skills.map((skill, index) => (
+                {tech.map((skill, index) => (
                     <span className="skill-badge" key={index}>{skill}</span>
                 ))}
             </p>
