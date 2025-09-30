@@ -27,10 +27,6 @@ const TypeWriter = ({ text = '', delay = 50, resetKey }) => {
         return () => clearTimeout(t);
     }, [index, text, delay]);
 
-    useEffect(() => {
-        console.log('TypeWriter render', Date.now());
-    });
-
     return <span aria-live="polite">{currentText}</span>;
 };
 
