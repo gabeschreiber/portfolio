@@ -4,6 +4,7 @@ import { useRef, useEffect, useState } from 'react';
 import ProjectCard from './components/ProjectCard'
 import TypeWriter from './effects/TypeWriter.jsx'
 
+
 const SKILLS = {
   'Programming Languages': ['Python', 'R', 'C++', 'JavaScript', 'Java', 'TypeScript', 'SQL', 'HTML', 'CSS', 'VHDL', 'AVR', 'MATLAB'],
   'Libraries/Frameworks': ['Pandas', 'NumPy', 'Scikit-Learn', 'PyTorch', 'TensorFlow', 'Keras', 'PyGame', 'SFML', 'React', 'TailwindCSS', 'PostgreSQL'],
@@ -57,15 +58,19 @@ function App() {
 
       <main className='container'>
         <section id='about-me' className='about-me card'>
+          <div className='profile-pic-container'>
+            <img className='profile-pic' src="profile-pic.jpg" alt="Profile picture of Gabriel Schreiber"/>
+          </div>
           <div className='about-me-left'>
-            <h1 className='title'>Computer Science Student </h1>
+            <h1 className='title'>Gabriel Schreiber</h1>
+            <h2 className='subtitle'>Computer Science Student</h2>
             <p className='subtitle'>
               Passionate about finding data-driven solutions to real-world, complex problems.
             </p>
           </div>
           <div className='education'>
-            <p className='education title'>B.S. in Computer Science</p>
-            <p className='education subtitle'>Minor in Statistics</p>
+            <h3 className='title'>B.S. in Computer Science</h3>
+            <sub className='subtitle'>Minor in Statistics</sub>
             {/* <TextGradient>University of Florida</TextGradient> */}
             <p className='education'>University of Florida</p>
           </div>

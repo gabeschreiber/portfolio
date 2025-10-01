@@ -1,8 +1,10 @@
 :root{
-  --bg: #1f241f;
+  --bg: #1f2024;
+  --titles: ;
+  --subtext: #04d9ff;
   --panel: rgba(255,255,255,0.03);
-  --muted: rgba(255,255,255,0.7);
-  --accent: #fdf2c3;
+  --muted: rgba(255, 255, 255, 0.7);
+  --accent: #c3ebfd;
   color-scheme: light dark;
   color: #e6eef8;
   background-color: var(--bg);

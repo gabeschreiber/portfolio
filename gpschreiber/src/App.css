@@ -1,4 +1,5 @@
-/* Basic app styles - minimal, non-invasive */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
 
 .app-root, .root { 
   min-height: 100vh; 
@@ -15,6 +16,19 @@
   background: transparent
 }
 
+/* Add styling for pfp */
+.profile-pic-container {
+  margin-right: 20px;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+}
+
 
 .name { 
   font-weight:700; 
@@ -23,18 +37,19 @@
 
 .nav-bar { 
   display:flex; 
-  gap:12px 
+  gap:12px
 }
 
 .nav-bar a { 
-  color: inherit; 
+  color: var(--accent); 
   text-decoration:none; 
   padding:6px 8px; 
   border-radius:6px 
 }
 
 .nav-bar a:hover { 
-  background: rgba(0,0,0,0.04) 
+  background: rgba(0,0,0,0.04);
+  text-decoration: underline; 
 }
 
 
@@ -61,6 +76,13 @@
   font-size: 3rem; 
 }
 
+.typewriter {
+  font-family: 'JetBrains Mono', ui-monospace, 'Courier New', Courier, Monaco, monospace;
+  font-weight: 500;
+  letter-spacing: 0.02rem;
+  font-size: inherit;
+  font-style: italic;
+}
 
 .about-me { 
   display:flex; 
@@ -129,3 +151,4 @@
   .about-me { flex-direction:column; align-items:flex-start }
   .avatar { width:100px; height:100px }
 }
+

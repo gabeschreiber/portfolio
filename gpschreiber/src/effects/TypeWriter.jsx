@@ -27,7 +27,7 @@ const TypeWriter = ({ text = '', delay = 50, resetKey }) => {
         return () => clearTimeout(t);
     }, [index, text, delay]);
 
-    return <span aria-live="polite">{currentText}</span>;
+    return <span className='typewriter' aria-live="polite">{currentText}</span>;
 };
 
 export default TypeWriter;
