@@ -59,7 +59,7 @@ function App() {
       <main className='container'>
         <section id='about-me' className='about-me card'>
           <div className='profile-pic-container'>
-            <img className='profile-pic' src="profile-pic.jpg" alt="Profile picture of Gabriel Schreiber"/>
+            <img className='profile-pic' src="/private/professional_gabe.JPEG" alt="Profile picture of Gabriel Schreiber"/>
           </div>
           <div className='about-me-left'>
             <h1 className='title'>Gabriel Schreiber</h1>
