@@ -70,7 +70,7 @@ function App() {
           </div>
           <div className='education'>
             <h3 className='title'>B.S. in Computer Science</h3>
-            <sub className='subtitle'>Minor in Statistics</sub>
+            <p className='subtitle'>Minor in Statistics</p>
             {/* <TextGradient>University of Florida</TextGradient> */}
             <p className='education'>University of Florida</p>
           </div>
